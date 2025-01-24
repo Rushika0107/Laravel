@@ -6,14 +6,16 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     function addUser(Request $request){
-echo "User name is  $request->username";
-echo"<br>";
-echo "User email is $request->email";
-echo"<br>";
+ $request->validate([
+"username"=>"required",
+"email"=>"required",
+"city"=>"required",
+"skills"=>"required",
+"gender"=>"required",
+"age"=>"required",
 
-echo "User city is $request->city";
-echo"<br>";
-
+ ]);
+ return $request;
 }
 }
 

@@ -9,6 +9,7 @@ Route::get("/", function () {
 
     Route::view("user-form", "user-form");
     Route::post("adduser",[UserController::class,"addUser"]);
+    //Route::view("user-form","user-form");
 
 
 
